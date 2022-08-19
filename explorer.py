@@ -1,5 +1,5 @@
 from helper import *
-
+import platform
 def cexplore(filePath):
     hFilePath = convToHidden(filePath)
     f = open(hFilePath, "r")
@@ -35,7 +35,7 @@ def cexplore(filePath):
         elif selInt == 2:
             import webbrowser
             print('\n' + "Opening in external application")
-            if platform == "darwin":  # check if on OSX
+            if platform.system() == "darwin":  # check if on OSX
                 filePath = "file:///" + file_location
             webbrowser.open(filePath)
             explore(filePath)

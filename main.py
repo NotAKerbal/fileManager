@@ -13,7 +13,7 @@ def mainMenu():
     print("Selection: ", end = "")
     selection = input()
     if selection == "1":
-        explore("/run/media/isaacc/Projects/FileManager/main.py")
+        explore("./main.py")
     if selection == "2":
         index()
     
