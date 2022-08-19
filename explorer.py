@@ -35,6 +35,8 @@ def cexplore(filePath):
         elif selInt == 2:
             import webbrowser
             print('\n' + "Opening in external application")
+            if platform == "darwin":  # check if on OSX
+                filePath = "file:///" + file_location
             webbrowser.open(filePath)
             explore(filePath)
     else:
